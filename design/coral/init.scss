@@ -1,0 +1,110 @@
+@import "~dcode/constructors/color";
+@import "~dcode/constructors/constructor";
+@import "~dcode/constructors/font";
+@import "~dcode/constructors/scrollbar";
+@import "~dcode/constructors/scrollbarBorder";
+@import "~dcode/constructors/typography";
+@import "~dcode/design/m2-baseline/radius";
+@import "~dcode/design/m2-baseline/transition";
+@import "background";
+@import "basic";
+@import "chart";
+@import "font";
+@import "opacity";
+@import "shadow";
+@import "text";
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+@mixin init {
+  $charts: ($chart,);
+  $shade: ('type1': 500, 'type2': 500);
+  $colors: (
+          'basic': 'grey',
+          'primary': 'red',
+          'tertiary': 'text',
+          'success': 'green',
+          'info': 'blue',
+          'warning': 'orange',
+          'error': 'red',
+          'disabled': 'grey'
+  );
+
+  :root {
+    @include initConstructor((
+            background: $background,
+            text: $text,
+            opacity: $opacity,
+            transition: $transition,
+            radius: $radius,
+            shadow: $shadow
+    ));
+    @include initFonts($font);
+    @include initColors($shade, $charts);
+  }
+
+  @include initTypography;
+  @include initScrollbar;
+  @include initScrollbarBorder;
+
+  @include initFontsClasses($font);
+  @include initColorsClasses($shade, $charts);
+  @include initColorsClassesFocus($shade, $colors);
+
+  body {
+    @include initColorsDefault($shade, $colors);
+    @include initConstructor((basic: $basic));
+    font-family: 'Rubik', sans-serif;
+  }
+
+  a {
+    &:not(.a-static) {
+      --basic-text: var(--primary-type1);
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .d-button {
+    /* Высота кнопка / стандарный размер */
+    --bt-height: 40px;
+
+    /* Высота кнопка / small */
+    --bt--sm-height: 32px;
+
+    /* Высота кнопка / large */
+    --bt--lg-height: 48px;
+  }
+
+  .d-carcass-field {
+    /* Отступ по X */
+    --cf-padding: 8px;
+    --cf-width: 340px;
+    --cm-padding: 8px;
+
+    &__body {
+      /* Ширина текст */
+      --font-subtitle1-weight: 400;
+    }
+  }
+
+  .d-list-item {
+    /* Ширина текст */
+    --font-subtitle1-weight: 400;
+  }
+
+  .coral-header,
+  .coral-header *,
+  .coral-header *::after,
+  .coral-header *::before,
+  .coral-header--navigation,
+  .coral-header--navigation *,
+  .coral-header--navigation *::after,
+  .coral-header--navigation *::before {
+    color: inherit;
+  }
+}
