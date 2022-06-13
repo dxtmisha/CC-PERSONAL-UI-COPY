@@ -50,11 +50,11 @@
   "files": [
     "/components/**/*",
     "/design/**/*",
-    "/babel.config",
+    "/babel.config.js",
     "/init.js",
     "/initComponents.js",
     "/options.js",
-    "/tailwind.config"
+    "/tailwind.config.js"
   ],
   "main": "initComponents.js",
   "name": "cc-personal-ui",
