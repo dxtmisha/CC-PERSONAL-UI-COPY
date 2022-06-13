@@ -33,10 +33,11 @@ export default function init (
     }
 
     app.use(dcode, options)
-    app.mount('#app')
 
     if (implementation) {
       implementation(app)
     }
+
+    app.mount('#app')
   })()
 }
