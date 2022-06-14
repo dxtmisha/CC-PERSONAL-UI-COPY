@@ -2,7 +2,7 @@ module.exports = {
   content: [
     './components/**/*.{html,js,json,vue}',
     './src/**/*.{html,js,json,vue}',
-    'ui/components/**/*.{html,js,json,vue}'
+    './node_modules/ui/components/**/*.{html,js,json,vue}'
   ],
   theme: {
     colors: ({ colors }) => ({
