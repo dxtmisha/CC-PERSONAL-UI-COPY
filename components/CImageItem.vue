@@ -41,7 +41,12 @@ export default {
     })
 
     return {
-      propImage: computed(() => images?.[props.image]),
+      propImage: computed(() => {
+        return {
+          zoom: 'contain',
+          file: images?.[props.image]
+        }
+      }),
       classList
     }
   }
