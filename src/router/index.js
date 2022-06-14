@@ -8,6 +8,7 @@ import CheckboxView from '@/views/CheckboxView'
 import ChipView from '@/views/ChipView'
 import DropView from '@/views/DropView'
 import HomeView from '../views/HomeView.vue'
+import ImageItemView from '@/views/ImageItemView'
 import InputView from '@/views/InputView'
 import LineDataView from '@/views/LineDataView'
 import LineDataFormView from '@/views/LineDataFormView'
@@ -63,6 +64,11 @@ const routes = [
     path: '/drop',
     name: 'drop',
     component: DropView
+  },
+  {
+    path: '/image-item',
+    name: 'image-item',
+    component: ImageItemView
   },
   {
     path: '/input',

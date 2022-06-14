@@ -40,7 +40,21 @@ export default {
           }
         },
         Options: {
-          padding: { type: 'checkbox' }
+          background: {
+            type: 'checkbox',
+            default: true
+          },
+          borderDark: { type: 'checkbox' },
+          padding: { type: 'checkbox' },
+          rounded: {
+            type: 'select',
+            default: 'lg',
+            list: [
+              { value: 'md' },
+              { value: 'lg' },
+              { value: 'xl' }
+            ]
+          }
         }
       }
     }

@@ -65,6 +65,11 @@ export const components = [
     value: 'line-form'
   },
   {
+    text: 'Image item',
+    to: '/image-item',
+    value: 'image-item'
+  },
+  {
     text: 'Input',
     to: '/input',
     value: 'input'
