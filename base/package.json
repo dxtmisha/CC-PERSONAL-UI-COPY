@@ -1,5 +1,4 @@
 {
-  "author": "coralclub",
   "browserslist": [
     "> 1%",
     "last 2 versions",
@@ -8,14 +7,11 @@
   ],
   "dependencies": {
     "core-js": "^3.8.3",
-    "dcode": "^0.16.22",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.2",
+    "ui": "https://github.com/dxtmisha/CC-PERSONAL-UI-COPY.git",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },
-  "description": "",
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
@@ -33,7 +29,6 @@
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0"
   },
-  "email": "dxtmisha@gmail.com",
   "eslintConfig": {
     "root": true,
     "env": {
@@ -48,24 +43,8 @@
     },
     "rules": {}
   },
-  "files": [
-    "/base/**/*",
-    "/components/**/*",
-    "/design/**/*",
-    "/babel.config.js",
-    "/init.js",
-    "/initComponents.js",
-    "/options.js",
-    "/postcss.config.js",
-    "/tailwind.config.js"
-  ],
-  "license": "",
-  "main": "initComponents.js",
-  "name": "cc-personal-ui",
-  "repository": {
-    "type": "git",
-    "url": "https://git.coral.club/Duong/cc-personal-ui.git"
-  },
+  "name": "vue",
+  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
