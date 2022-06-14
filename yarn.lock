@@ -2684,10 +2684,10 @@ csstype@^2.6.8:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.20.tgz#9229c65ea0b260cf4d3d997cb06288e36a8d6dda"
   integrity sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==
 
-dcode@^0.16.20:
-  version "0.16.20"
-  resolved "https://registry.yarnpkg.com/dcode/-/dcode-0.16.20.tgz#b9bcff5b9c2b7cc75bdc603e684c1f27f0637066"
-  integrity sha512-1FF5dozOkjmyBYTE7hhFXrzYAX8qZrefW6c49DrABMa0VThj1d1ncW9wm85aEO23OZrSeZS3nCwUtyEwswmmiQ==
+dcode@^0.16.22:
+  version "0.16.22"
+  resolved "https://registry.yarnpkg.com/dcode/-/dcode-0.16.22.tgz#47d4b21373b10fa56ebdcb86ad466c69b5fb14bc"
+  integrity sha512-Cqxyh/DlvGloeuqwhm+hckrmA9Neh4rYl2DOAyCG8eaCA5uxLm+8rVfiBlOZuS2I5u1ThZg7KpUutOiJFrqLQA==
 
 debug@2.6.9, debug@^2.6.9:
   version "2.6.9"

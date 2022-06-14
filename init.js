@@ -4,40 +4,35 @@ import dcode from 'dcode/init'
 import Translation from 'dcode/classes/Translation'
 import { options } from './options'
 
+import icons from './design/icons'
 import './design/tailwind.css'
 import './design/main.scss'
 
-export default function init (
-  App,
-  API = undefined,
+export default async function init (
+  appElement,
+  api = undefined,
   router = undefined,
-  store = undefined,
-  implementation = undefined
+  store = undefined
 ) {
-  (async () => {
-    if (
-      API &&
-      'translation' in API
-    ) {
-      Translation.add(await API.translation())
-    }
+  if (
+    api &&
+    'translation' in api
+  ) {
+    Translation.add(await api.translation())
+  }
 
-    const app = createApp(App)
+  icons()
 
-    if (router) {
-      app.use(router)
-    }
+  const app = createApp(appElement)
 
-    if (store) {
-      app.use(store)
-    }
+  if (router) {
+    app.use(router)
+  }
 
-    app.use(dcode, options)
+  if (store) {
+    app.use(store)
+  }
 
-    if (implementation) {
-      implementation(app)
-    }
-
-    app.mount('#app')
-  })()
+  app.use(dcode, options)
+  return app
 }

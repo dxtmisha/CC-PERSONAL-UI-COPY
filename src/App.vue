@@ -1,31 +1,38 @@
 <template>
-  <nav>
-    <button class="p-8"> asd</button>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="px-4 mx-auto mt-6 md:mt-16 max-w-6xl">
+    <div class="block md:flex justify-between items-center">
+      <h1 class="pb-4 md:pb-0 font:headline5">coralclub</h1>
+      <div class="flex justify-end">
+        <c-button-select
+          :list="components"
+          :value="route.name"
+          icon="format_list_bulleted"
+          text="Component"
+        />
+      </div>
+    </div>
+    <div class="pt-8">
+      <router-view/>
+    </div>
+  </div>
+  <div class="h-32"/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import { useRoute } from 'vue-router'
+import { components } from './media/components'
 
-nav {
-  padding: 30px;
+export default {
+  components: {},
+  setup () {
+    const route = useRoute()
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    return {
+      route,
+      components
     }
   }
 }
-</style>
+</script>
+
+<style lang="scss"/>
