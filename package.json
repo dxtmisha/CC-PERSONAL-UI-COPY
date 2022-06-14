@@ -51,6 +51,7 @@
   "files": [
     "/assets/**/*",
     "/base/**/*",
+    "/classes/**/*",
     "/components/**/*",
     "/design/**/*",
     "/babel.config.js",
